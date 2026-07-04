@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キムフーズ人材紹介|食品製造の現場を知る、有料職業紹介</title>
+<meta name="description" content="株式会社キムフーズの有料職業紹介サービス。自社の食品製造工場で外国人材を雇用・育成してきた経験をもとに、食品製造業で経験を積んだ外国人材をご紹介します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBFAF7;
+  --ink:#22292B;
+  --ink-soft:#5A6468;
+  --beni:#A8322A;        /* キムチの紅 */
+  --beni-deep:#7E241E;
+  --beni-tint:#F5E9E6;
+  --steel:#D9DDDC;       /* ステンレスの淡いグレー */
+  --line:#E4E2DC;
+  --maxw:1080px;
+  --serif:'Shippori Mincho','Hiragino Mincho ProN',serif;
+  --sans:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.9;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--beni);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,250,247,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .name{font-family:var(--serif);font-weight:700;font-size:1.15rem;letter-spacing:.06em}
+.brand .sub{font-size:.7rem;color:var(--ink-soft);letter-spacing:.12em}
+nav.gnav{display:flex;gap:26px;font-size:.85rem;font-weight:500}
+nav.gnav a{padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s}
+nav.gnav a:hover{border-bottom-color:var(--beni)}
+.nav-cta{
+  background:var(--beni);color:#fff;padding:9px 20px;border-radius:3px;
+  font-size:.85rem;font-weight:700;letter-spacing:.06em;transition:background .2s;
+}
+.nav-cta:hover{background:var(--beni-deep)}
+@media(max-width:820px){
+  nav.gnav{display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:56px;
+  padding:88px 24px 96px;
+  max-width:var(--maxw);
+  margin:0 auto;
+  align-items:start;
+}
+.tate{
+  writing-mode:vertical-rl;
+  font-family:var(--serif);
+  font-weight:700;
+  font-size:clamp(2.1rem,4.6vw,3.4rem);
+  letter-spacing:.22em;
+  line-height:1.5;
+  color:var(--ink);
+  height:clamp(340px,46vw,480px);
+}
+.tate .beni{color:var(--beni)}
+.hero-body{max-width:560px;padding-top:8px}
+.eyebrow{
+  display:inline-block;
+  font-size:.78rem;font-weight:700;letter-spacing:.24em;
+  color:var(--beni);
+  border:1px solid var(--beni);
+  padding:4px 14px;border-radius:2px;
+  margin-bottom:26px;
+}
+.hero-body p.lead{
+  font-size:1.05rem;
+  margin-bottom:1.4em;
+}
+.hero-body p.lead strong{font-weight:700}
+.hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.btn{
+  display:inline-block;padding:15px 34px;border-radius:3px;
+  font-weight:700;letter-spacing:.08em;font-size:.95rem;
+  transition:background .2s,color .2s;
+}
+.btn-primary{background:var(--beni);color:#fff}
+.btn-primary:hover{background:var(--beni-deep)}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.hero-note{margin-top:22px;font-size:.8rem;color:var(--ink-soft)}
+.hero-bg-kanji{
+  position:absolute;right:-40px;bottom:-70px;
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(200px,30vw,340px);
+  color:var(--beni-tint);
+  line-height:1;
+  user-select:none;pointer-events:none;
+  z-index:-1;
+}
+@media(max-width:820px){
+  .hero-inner{grid-template-columns:1fr;gap:36px;padding:56px 24px 72px}
+  .tate{height:auto;writing-mode:horizontal-tb;letter-spacing:.1em;font-size:clamp(1.7rem,7vw,2.4rem);line-height:1.6}
+  .tate br.tate-only{display:none}
+}
+
+/* ---------- section base ---------- */
+section{padding:96px 0}
+.sec-head{margin-bottom:56px}
+.sec-label{
+  font-size:.78rem;font-weight:700;letter-spacing:.26em;color:var(--beni);
+  margin-bottom:14px;
+}
+.sec-title{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(1.5rem,3.4vw,2.15rem);
+  letter-spacing:.06em;line-height:1.6;
+}
+.sec-desc{margin-top:18px;color:var(--ink-soft);max-width:640px}
+@media(max-width:820px){section{padding:64px 0}}
+
+/* ---------- 課題 ---------- */
+.problem{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.problem-list{list-style:none;display:grid;gap:14px}
+.problem-list li{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:16px 20px;
+  font-size:.95rem;
+  position:relative;
+  padding-left:44px;
+}
+.problem-list li::before{
+  content:"";position:absolute;left:18px;top:50%;transform:translateY(-50%);
+  width:10px;height:10px;border-radius:50%;
+  background:var(--steel);border:2px solid var(--ink-soft);
+}
+.problem-answer{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(1.15rem,2.4vw,1.5rem);
+  line-height:2;letter-spacing:.04em;
+}
+.problem-answer .beni{color:var(--beni);font-weight:700}
+@media(max-width:820px){.problem-grid{grid-template-columns:1fr;gap:36px}}
+
+/* ---------- 強み ---------- */
+.strengths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.strength{
+  background:#fff;border:1px solid var(--line);border-radius:4px;
+  padding:36px 30px;
+  position:relative;
+}
+.strength::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--beni);border-radius:4px 4px 0 0;
+}
+.strength h3{
+  font-family:var(--serif);font-weight:700;font-size:1.15rem;
+  letter-spacing:.04em;line-height:1.7;margin-bottom:16px;
+}
+.strength p{font-size:.92rem;color:var(--ink-soft)}
+.strength .s-tag{
+  display:inline-block;margin-bottom:18px;
+  font-size:.72rem;font-weight:700;letter-spacing:.18em;
+  color:var(--beni);
+}
+@media(max-width:900px){.strengths-grid{grid-template-columns:1fr}}
+
+/* ---------- 人材 ---------- */
+.talent{background:var(--ink);color:var(--paper)}
+.talent .sec-label{color:#E4A79F}
+.talent .sec-desc{color:#B9BFC0}
+.talent-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px}
+.talent-card{
+  border:1px solid #3C4548;border-radius:4px;padding:30px 28px;
+}
+.talent-card h3{
+  font-family:var(--serif);font-weight:600;font-size:1.08rem;
+  margin-bottom:12px;letter-spacing:.04em;
+}
+.talent-card p{font-size:.9rem;color:#B9BFC0}
+.talent-card .chip{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;
+  border:1px solid #E4A79F;color:#E4A79F;
+  padding:3px 12px;border-radius:2px;margin-bottom:16px;
+}
+@media(max-width:820px){.talent-grid{grid-template-columns:1fr}}
+
+/* ---------- 流れ ---------- */
+.flow-list{list-style:none;counter-reset:step;display:grid;gap:0}
+.flow-list li{
+  counter-increment:step;
+  display:grid;grid-template-columns:88px 1fr;gap:28px;
+  padding:30px 0;border-bottom:1px solid var(--line);
+  align-items:start;
+}
+.flow-list li:first-child{border-top:1px solid var(--line)}
+.flow-num{
+  font-family:var(--serif);font-weight:700;
+  font-size:1.8rem;color:var(--beni);
+  line-height:1.2;
+}
+.flow-num::before{content:counter(step,decimal-leading-zero)}
+.flow-body h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;letter-spacing:.04em}
+.flow-body p{font-size:.92rem;color:var(--ink-soft)}
+@media(max-width:600px){.flow-list li{grid-template-columns:60px 1fr;gap:18px}}
+
+/* ---------- 料金 ---------- */
+.fee{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fee-box{
+  border:1.5px solid var(--ink);border-radius:4px;
+  padding:44px 40px;
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+}
+.fee-main{font-family:var(--serif);font-weight:700;font-size:clamp(1.3rem,2.8vw,1.8rem);letter-spacing:.04em;line-height:1.7}
+.fee-main .beni{color:var(--beni)}
+.fee-notes{list-style:none;display:grid;gap:10px;font-size:.9rem;color:var(--ink-soft)}
+.fee-notes li{padding-left:20px;position:relative}
+.fee-notes li::before{content:"—";position:absolute;left:0;color:var(--beni)}
+@media(max-width:820px){.fee-box{grid-template-columns:1fr;padding:32px 26px}}
+
+/* ---------- 会社概要 ---------- */
+.company-table{width:100%;border-collapse:collapse;font-size:.95rem}
+.company-table th,.company-table td{
+  text-align:left;padding:18px 8px;border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+.company-table th{width:180px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
+.company-table td{color:var(--ink-soft)}
+@media(max-width:600px){
+  .company-table th{width:110px;font-size:.85rem}
+}
+
+/* ---------- CTA ---------- */
+.contact{background:var(--beni);color:#fff;text-align:center}
+.contact .sec-title{color:#fff}
+.contact p.contact-lead{max-width:560px;margin:20px auto 40px;color:#F6DEDA;font-size:.98rem}
+.contact .btn-white{
+  background:#fff;color:var(--beni);padding:17px 46px;font-size:1rem;
+}
+.contact .btn-white:hover{background:var(--beni-tint)}
+.contact .contact-alt{margin-top:26px;font-size:.9rem;color:#F6DEDA;letter-spacing:.04em}
+.contact .contact-alt strong{color:#fff;font-size:1.35rem;letter-spacing:.06em}
+
+/* ---------- footer ---------- */
+footer{padding:44px 0;font-size:.8rem;color:var(--ink-soft)}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-license{letter-spacing:.04em}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="name">キムフーズ人材紹介</span>
+      <span class="sub">株式会社キムフーズ</span>
+    </a>
+    <nav class="gnav" aria-label="メインナビゲーション">
+      <a href="#strengths">選ばれる理由</a>
+      <a href="#talent">ご紹介できる人材</a>
+      <a href="#flow">ご紹介の流れ</a>
+      <a href="#fee">料金</a>
+      <a href="#company">会社概要</a>
+      <a class="nav-cta" href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ヒーロー -->
+<div class="hero">
+  <div class="hero-inner">
+    <h1 class="tate">現場を知る、<br class="tate-only"><span class="beni">紹介会社</span>です。</h1>
+    <div class="hero-body">
+      <span class="eyebrow">食品製造業 専門 有料職業紹介</span>
+      <p class="lead"><strong>私たち自身が、食品製造の会社です。</strong>長野県上田市でキムチの製造を営み、自社工場で外国人スタッフとともに働いてきました。</p>
+      <p class="lead">その経験があるから、履歴書の文字だけでは分からない「現場で本当に活躍できる人材か」を、製造業の目線で見極めてご紹介できます。</p>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="#contact">採用のご相談(無料)</a>
+        <a class="btn btn-ghost" href="#strengths">選ばれる理由を見る</a>
+      </div>
+      <p class="hero-note">ご相談・お見積りは無料です。採用が決まるまで費用はかかりません。</p>
+    </div>
+  </div>
+  <div class="hero-bg-kanji" aria-hidden="true">現場</div>
+</div>
+
+<!-- 課題 -->
+<section class="problem" aria-labelledby="problem-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label">PROBLEM</p>
+      <h2 class="sec-title" id="problem-title">こんなお悩みはありませんか</h2>
+    </div>
+    <div class="problem-grid">
+      <ul class="problem-list">
+        <li>求人を出しても、製造現場の人手が集まらない</li>
+        <li>外国人材に興味はあるが、何から始めればよいか分からない</li>
+        <li>紹介会社に頼んだが、現場のきつさを理解していない人が来て早期退職に</li>
+        <li>衛生管理や安全ルールを、一から教える余裕がない</li>
+      </ul>
+      <p class="problem-answer">
+        その悩み、<span class="beni">同じ食品製造業の私たち</span>が、いちばんよく分かります。だからこそ、現場に定着する人材だけをご紹介します。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 強み -->
+<section id="strengths" aria-labelledby="strengths-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label">REASON</p>
+      <h2 class="sec-title" id="strengths-title">キムフーズ人材紹介が選ばれる3つの理由</h2>
+    </div>
+    <div class="strengths-grid">
+      <article class="strength">
+        <span class="s-tag">理由 01</span>
+        <h3>自社工場で外国人材を<br>雇用・育成してきた実績</h3>
+        <p>私たちは紹介業の前に、キムチ製造の会社です。自社の2つの工場で外国人スタッフを受け入れ、育成し、ともに製品をつくってきました。「受け入れる側」の苦労と工夫を、実体験として知っています。</p>
+      </article>
+      <article class="strength">
+        <span class="s-tag">理由 02</span>
+        <h3>食品製造の経験者を、<br>製造業の目でご紹介</h3>
+        <p>ご紹介するのは、食品製造の現場で経験を積んだ外国人材。衛生管理・温度管理・ライン作業の基本が身についているかを、私たち自身の現場基準で確認したうえでマッチングします。</p>
+      </article>
+      <article class="strength">
+        <span class="s-tag">理由 03</span>
+        <h3>入社後の定着まで、<br>伴走します</h3>
+        <p>紹介して終わりではありません。在留資格の手続きや生活面のフォローなど、外国人材が長く働き続けるための支援体制を整えています(登録支援機関 申請中)。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 人材 -->
+<section class="talent" id="talent" aria-labelledby="talent-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label">TALENT</p>
+      <h2 class="sec-title" id="talent-title">ご紹介できる人材</h2>
+      <p class="sec-desc">食品製造の現場経験を持つ外国人材を中心に、貴社の工程・シフトに合わせてご紹介します。</p>
+    </div>
+    <div class="talent-grid">
+      <article class="talent-card">
+        <span class="chip">特定技能</span>
+        <h3>飲食料品製造業分野の特定技能人材</h3>
+        <p>惣菜・漬物・パン・菓子・水産加工など、飲食料品製造業分野の特定技能を持つ人材。即戦力として製造ラインに入れる経験者をご紹介します。</p>
+      </article>
+      <article class="talent-card">
+        <span class="chip">経験者</span>
+        <h3>食品工場での実務経験を持つ人材</h3>
+        <p>技能実習や就労経験を通じて、日本の食品工場の衛生ルール・作業手順を理解している人材。HACCPに基づく衛生管理の現場にもスムーズに馴染めます。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 流れ -->
+<section id="flow" aria-labelledby="flow-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label">FLOW</p>
+      <h2 class="sec-title" id="flow-title">ご紹介の流れ</h2>
+      <p class="sec-desc">初回のご相談から入社後のフォローまで、一貫して私たちが担当します。</p>
+    </div>
+    <ol class="flow-list">
+      <li>
+        <span class="flow-num" aria-hidden="true"></span>
+        <div class="flow-body">
+          <h3>ヒアリング(無料)</h3>
+          <p>貴社の製造工程・シフト・求める人物像を伺います。必要に応じて現場を見学させていただき、実際の作業内容を把握します。</p>
+        </div>
+      </li>
+      <li>
+        <span class="flow-num" aria-hidden="true"></span>
+        <div class="flow-body">
+          <h3>候補者のご紹介</h3>
+          <p>食品製造の経験・日本語力・在留資格を確認した候補者を、私たちの現場基準で選定してご提案します。</p>
+        </div>
+      </li>
+      <li>
+        <span class="flow-num" aria-hidden="true"></span>
+        <div class="flow-body">
+          <h3>面接・現場見学</h3>
+          <p>面接の設定から当日の同席まで対応します。候補者にも実際の現場を見てもらい、入社後のミスマッチを防ぎます。</p>
+        </div>
+      </li>
+      <li>
+        <span class="flow-num" aria-hidden="true"></span>
+        <div class="flow-body">
+          <h3>内定・雇用契約</h3>
+          <p>雇用条件の調整や契約書類の準備をサポートします。外国人雇用が初めての企業様にも、必要な手続きを分かりやすくご案内します。</p>
+        </div>
+      </li>
+      <li>
+        <span class="flow-num" aria-hidden="true"></span>
+        <div class="flow-body">
+          <h3>在留資格の手続き</h3>
+          <p>在留資格の変更・更新に必要な書類の準備を、行政書士等の専門家と連携してサポートします。</p>
+        </div>
+      </li>
+      <li>
+        <span class="flow-num" aria-hidden="true"></span>
+        <div class="flow-body">
+          <h3>入社・定着フォロー</h3>
+          <p>入社後も定期的に本人と企業様の双方に状況を伺い、生活面・仕事面の困りごとを早期に解消します。</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 料金 -->
+<section class="fee" id="fee" aria-labelledby="fee-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label">FEE</p>
+      <h2 class="sec-title" id="fee-title">料金について</h2>
+    </div>
+    <div class="fee-box">
+      <p class="fee-main">完全<span class="beni">成功報酬型</span>。<br>採用が決まるまで、<br>費用は一切かかりません。</p>
+      <ul class="fee-notes">
+        <li>ご相談・ヒアリング・候補者のご紹介は無料です。</li>
+        <li>紹介手数料は、採用決定時に理論年収に応じてお支払いいただきます。詳細な手数料表は面談時にご提示します。</li>
+        <li>万一早期に退職となった場合の返戻金規定を設けています。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 会社概要 -->
+<section id="company" aria-labelledby="company-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label">COMPANY</p>
+      <h2 class="sec-title" id="company-title">会社概要</h2>
+    </div>
+    <table class="company-table">
+      <tbody>
+        <tr><th scope="row">会社名</th><td>株式会社キムフーズ</td></tr>
+        <tr><th scope="row">代表者</th><td>代表取締役 金 愼</td></tr>
+        <tr><th scope="row">設立</th><td>2001年5月</td></tr>
+        <tr><th scope="row">所在地</th><td>〒386-0005 長野県上田市古里80-18</td></tr>
+        <tr><th scope="row">事業内容</th><td>食品(キムチ)の製造・販売/有料職業紹介事業</td></tr>
+        <tr><th scope="row">許可番号</th><td>有料職業紹介事業 厚生労働大臣許可 20-ユ-300218</td></tr>
+        <tr><th scope="row">登録支援機関</th><td>申請中</td></tr>
+        <tr><th scope="row">製造拠点</th><td>自社工場・真田工場(長野県上田市)</td></tr>
+        <tr><th scope="row">お問い合わせ</th><td>TEL:080-9707-7599(平日 9:00–17:00)<br>MAIL:naokane-kim@kankokuya.net</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <p class="sec-label" style="color:#F6DEDA">CONTACT</p>
+    <h2 class="sec-title" id="contact-title">まずは、現場のお悩みをお聞かせください</h2>
+    <p class="contact-lead">「外国人雇用は初めて」という企業様も歓迎です。同じ食品製造業の目線で、貴社に合う進め方をご提案します。ご相談は無料です。</p>
+    <p class="contact-alt">メールでのお問い合わせ<br><strong><a href="mailto:naokane-kim@kankokuya.net">naokane-kim@kankokuya.net</a></strong></p>
+    <p class="contact-alt">お電話でのご相談 <strong><a href="tel:08097077599">080-9707-7599</a></strong>(平日 9:00–17:00)</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>© 株式会社キムフーズ|長野県上田市古里80-18</p>
+    <p class="footer-license">有料職業紹介事業 厚生労働大臣許可 20-ユ-300218</p>
+  </div>
+</footer>
+
+</body>
+</html>
